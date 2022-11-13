@@ -1,0 +1,37 @@
+.SM_main_container{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    left: 40px;
+}
+.heading{
+    position: relative;
+    left: 45px;
+    bottom: -13px;
+    align-self: flex-start;
+}
+@media screen and (max-width: 1550px) and (min-width: 900px) {
+    .SM_main_container{
+        flex-wrap: wrap;
+        width: fit-content;
+    }
+}
+@media screen and (max-width: 900px) {
+    .SM_main_container{
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: fit-content;
+    }
+}
+@media screen and (max-width: 600px) {
+    .heading{
+        position: relative;
+        left: 0px;
+        align-self: center;
+    }
+    .SM_main_container{
+        position: relative;
+        left: 0px;
+        align-self: center;
+    }
+}

@@ -1,13 +1,25 @@
-.card{
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px;
+.active{
+    background-color: rgba(0, 149, 255, 0.937);
+    font-weight: 600;
+    border-radius: 1px;
     cursor: pointer;
 }
-.active{
-    background-color: red;
-}
 .inactive{
-    background-color: green;
+    cursor: pointer;
+    border: 2px solid rgb(0, 149, 255);
+    border-radius: 5px;
+}
+.inactive:hover{
+    background-color: rgba(0, 149, 255, 0.558);
+}
+.form-check-label{
+    padding: 15px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .form-check-label{
+        margin: 5px;
+    }
 }
