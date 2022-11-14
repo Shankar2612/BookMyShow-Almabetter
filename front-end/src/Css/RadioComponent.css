@@ -18,6 +18,28 @@
     margin: 10px;
 }
 
+.seats{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+}
+
+.seats-text{
+    padding-right: 15px;
+}
+
+.seats-input{
+    width: 50%;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+    border: none!important;
+    padding: 5px;
+}
+
+
 @media screen and (max-width: 600px) {
     .form-check-label{
         margin: 5px;

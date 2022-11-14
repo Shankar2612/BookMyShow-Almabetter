@@ -1,0 +1,27 @@
+.SS_main_container{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    left: 40px;
+}
+.SS_heading{
+    position: relative;
+    left: 45px;
+    bottom: -13px;
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 700px) {
+    .SS_heading{
+        position: relative;
+        left: 0px;
+        align-self: center;
+    }
+    .SS_main_container{
+        position: relative;
+        left: 0px;
+        align-self: center;
+        justify-content: center;
+    }
+}
