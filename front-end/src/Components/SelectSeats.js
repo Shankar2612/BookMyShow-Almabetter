@@ -4,7 +4,8 @@ import { seats } from "../data";
 import "../Css/SelectSeats.css";
 
 const SelectSeats = () => {
-  const [seat, changeSeats] = useState("");
+  const [seat, changeSeats] = useState([]);
+  const [noOfseat, changeNoOfSeats] = useState({A1: 0, A2: 0, A3: 0, A4: 0, D1: 0, D2: 0 });
   return (
     <>
       <h1 className="SS_heading">Select Seats :-</h1>
@@ -17,6 +18,8 @@ const SelectSeats = () => {
               movie={seat}
               key={index}
               seats={seats}
+              changeNoOfSeats={changeNoOfSeats}
+              noOfseat={noOfseat}
             />
           );
         })}
