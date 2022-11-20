@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import RadioComponent from "./RadioComponent";
 import { slots } from "../data";
 import "../Css/TimeShedule.css";
+import BsContext from "../Context/BsContext";
 
 const TimeShedule = () => {
-  const [time, changeTime] = useState("");
+  const context = useContext(BsContext);
+  const { time, changeTime} = context;
   return (
     <>
       <h1 className="TS_heading">Select a Schedule :-</h1>

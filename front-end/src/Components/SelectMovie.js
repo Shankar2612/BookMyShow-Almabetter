@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import RadioComponent from "./RadioComponent";
 import { moviesList } from "../data";
+import BsContext from "../Context/BsContext";
 import "../Css/SelectMovie.css";
 
 const SelectMovie = () => {
-  const [movie, changeMovie] = useState("");
+
+  const context = useContext(BsContext);
+  const { movie, changeMovie } = context;
   return (
     <>
       <h1 className="SM_heading">Select a Movie :-</h1>

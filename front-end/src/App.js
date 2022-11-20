@@ -1,14 +1,14 @@
+import React from "react";
 import "./App.css";
-import MovieState from "./Context/MovieState"
+import BsState from "./Context/BsState";
 import Home from "./Pages/Home";
-
 function App() {
-
-  return 
-  (
-    <MovieState >
-      <Home />;
-    </MovieState>
+  return (
+    <>
+      <BsState>
+        <Home />
+      </BsState>
+    </>
   )
 }
 

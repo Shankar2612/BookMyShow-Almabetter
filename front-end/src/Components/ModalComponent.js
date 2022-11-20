@@ -1,27 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import BsContext from '../Context/BsContext';
+import "../Css/ModalComponent.css"
 
 function Modal(props) {
-    // this component is udes to ask user before submitting book for confirming the booking details.
-    // styling not yet done.
-    
-    const AStyle = {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: "center",
-        zIndex: 5
-    }
+    const context = useContext(BsContext);
+    const { ok, notOk } = context;
+
+    // this component is not fulli done please dont change
+
+
     return (
-        <div className="container" style={AStyle}>
-            {
-                <div>
-                    <strong>{props.message}</strong>
-                    <div className='d-flex justify-between'>
-                        <button>Ok</button>
-                        <button>Cancel</button>
+        <>
+            {props.alert &&
+                <div className="modal-container" >
+                    <div className='modal-body'>
+                            <strong >{props.alert.msg}</strong>
+                            <button onClick={ok}>Ok</button>
+                            <button onClick={notOk}>Cancel</button>
                     </div>
-                </div>    
+                </div>
             }
-        </div>
+        </>
     )
 }
 
