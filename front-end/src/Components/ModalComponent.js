@@ -6,7 +6,7 @@ function Modal(props) {
     const context = useContext(BsContext);
     const { ok, notOk } = context;
 
-    // this component is not fulli done please dont change
+    // this component is not full done please dont change
 
 
     return (
