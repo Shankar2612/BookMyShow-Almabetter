@@ -18,8 +18,8 @@ const Home = (props) => {
           <SelectMovie />
           <TimeShedule />
           <SelectSeats />
-      {/* on calling this function alert will be set with message (first argument)  */}
-      <button onClick={() => { showMsg("are you sure") } } className="BN-btn">Book Now</button>
+      {/* on calling this function alert will be set with header (first argument)  and deatils(body) as second argument*/}
+      <button onClick={() => { showMsg("Are you sure ?", "Details selected by the user Details selected by the user v Details selected by the user Details selected by the user Details selected by the user") } } className="BN-btn">Book Now</button>
         </div>
         <div className="last_booking_details_container">
           <LastBookingDetails />

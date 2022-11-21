@@ -10,9 +10,11 @@ const BsState = (props) => {
 
 
     // Setting alert on calling this message (used in Home.js)
-    const showMsg = (message, type) => {
+    const showMsg = (head, body) => {
         setAlert({
-            msg: message
+            head: head,
+            body: body
+
         })
     }
 

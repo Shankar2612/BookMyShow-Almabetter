@@ -12,11 +12,18 @@ function Modal(props) {
     return (
         <>
             {props.alert &&
-                <div className="modal-container" >
-                    <div className='modal-body'>
-                            <strong >{props.alert.msg}</strong>
+                <div className={`modal-container ${props.alert ? "active" : "inactive"}`} >
+                    <div className='modal'>
+                        <div className="modal-header">
+                            <strong >{props.alert.head}</strong>
+                        </div>
+                        <div className='modal-body'>
+                            <span>{props.alert.body}</span>
+                        </div>
+                        <div className='modal-footer'>
                             <button onClick={ok}>Ok</button>
                             <button onClick={notOk}>Cancel</button>
+                        </div>
                     </div>
                 </div>
             }
