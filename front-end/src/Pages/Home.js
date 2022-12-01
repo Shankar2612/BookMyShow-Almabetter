@@ -9,7 +9,7 @@ import { useContext } from "react";
 
 const Home = (props) => {
   const context = useContext(BsContext);
-  const { showMsg, alert, wdata } = context;
+  const { showMsg, alert, movie } = context;
   return (
     <>
       <Modal alert={alert} />
@@ -19,7 +19,7 @@ const Home = (props) => {
           <TimeShedule />
           <SelectSeats />
       {/* on calling this function alert will be set with header (first argument)  and deatils(body) as second argument*/}
-      <button onClick={() => { showMsg("Are you sure ?", wdata); } } className="BN-btn">Book Now</button>
+      <button onClick={() => { showMsg("Are you sure ?", movie); } } className="BN-btn">Book Now</button>
         </div>
         <div className="last_booking_details_container">
           <LastBookingDetails />

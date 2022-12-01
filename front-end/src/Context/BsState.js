@@ -31,7 +31,7 @@ const BsState = (props) => {
     // checking if the user is ok with the details. if yes pushing the data to database 
     const ok = async () => {
 
-        // Sending api request to backend with user selected movie, slot and seats to book movie.
+        // Sending api request to backend with user selected movie, slot and seats to book movie. (getting tha api)
         setAlert(null);
         const response = await fetch(`http://localhost:8080/api/booking`, {
             method: 'POST',
@@ -45,12 +45,9 @@ const BsState = (props) => {
         showMsg("Movie booked successfully", response.movie);
         setAlert(null);
 
-        // Sending api request to backend to get the last movie booking details.
+        // Sending api request to backend to get the last movie booking details. (not working properly.)
         const last_Booking_Details = await fetch(`http://localhost:8080/api/booking`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
+            method: 'GET'
         });
 
         // Setting last booking details recieved by the api.
@@ -62,7 +59,6 @@ const BsState = (props) => {
         console.log("user said he is not okay with details");
         setAlert(null);
     }
-    console.log(L_B_D, "L_B_D");
     return (
         // providing all the required data to app
         <BsContext.Provider value={{ showMsg, alert, ok, notOk, movie, changeMovie, time, changeTime, noOfseat, changeNoOfSeats, L_B_D }}>
