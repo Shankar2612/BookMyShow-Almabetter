@@ -5,7 +5,7 @@
     width: 100Vw;
     height: 110vh;
     background: none;
-    background-color: rgb(0,0,0,0.45);
+    /* background-color: rgb(0,0,0,0.45); */
     overflow: auto;
     z-index: 1;
     position: fixed;

@@ -7,6 +7,8 @@ import "../Css/SelectMovie.css";
 const SelectMovie = () => {
 
   const context = useContext(BsContext);
+
+  // Getting movie and change movie components from the context.
   const { movie, changeMovie } = context;
   return (
     <>
@@ -16,8 +18,8 @@ const SelectMovie = () => {
           return (
             <RadioComponent
               text={el}
-              changeMovie={changeMovie}
-              movie={movie}
+              changeSelection={changeMovie}
+              data={movie}
               key={index}
             />
           );

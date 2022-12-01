@@ -1,17 +1,20 @@
-const { Schema } = require('mongoose');
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
+// Created a new schema for pushing movie booking details.
 const bookMovieSchema = new Schema({
-    movie: Schema.Types.String,
-    slot: Schema.Types.String,
+    movie: { type: String },
+    slot: { type: String },
     seats: {
-        A1: Schema.Types.Number,
-        A2: Schema.Types.Number,
-        A3: Schema.Types.Number,
-        A4: Schema.Types.Number,
-        D1: Schema.Types.Number,
-        D2: Schema.Types.Number
+        A1: { type: Number },
+        A2: { type: Number },
+        A3: { type: Number },
+        A4: { type: Number },
+        D1: { type: Number },
+        D2: { type: Number }
     }
 
 })
 
-exports.bookMovieSchema = bookMovieSchema;
+// Registering the schema with mongoose model.
+module.exports = mongoose.model('bookmovietickets', bookMovieSchema);

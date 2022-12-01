@@ -6,6 +6,8 @@ import BsContext from "../Context/BsContext";
 
 const TimeShedule = () => {
   const context = useContext(BsContext);
+  
+  // Getting time and change changeTime components from the context.
   const { time, changeTime} = context;
   return (
     <>
@@ -15,8 +17,8 @@ const TimeShedule = () => {
           return (
             <RadioComponent
               text={el}
-              changeMovie={changeTime}
-              movie={time}
+              changeSelection={changeTime}
+              data={time}
               key={index}
             />
           );

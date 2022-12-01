@@ -1,15 +1,19 @@
 import React from "react";
 import "../Css/RadioComponent.css";
 
-const RadioComponent = ({ text, changeMovie, movie }) => {
+
+// This the radio component which is used for selecting movie and slot.
+const RadioComponent = ({ text, changeSelection, data }) => {
+
+  // Changing selected data from the user.
   const handleChecked = (value) => {
-    changeMovie(value);
+    changeSelection(value);
   };
 
   return (
     <div
       name={text}
-      className={`form-check-label ${movie === text ? "active" : "inactive"}`}
+      className={`form-check-label ${data === text ? "active" : "inactive"}`}
       onClick={() => {
         handleChecked(text);
       }}>
