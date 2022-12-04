@@ -17,12 +17,15 @@ router.post("/booking", async (req, res) => {
 
   if (saved) {
     //on successfull
-    res.status(200).json({ message: "Booking successful!" });
+    res.status(200).json({ data: myData, message: "Booking successful!" });
   } else {
     //on error
     res
       .status(500)
-      .json({ message: "Something went wrong!. Please try again." });
+      .json({
+        data: null,
+        message: "Something went wrong!. Please try again.",
+      });
   }
 });
 
@@ -33,10 +36,10 @@ router.get("/booking", async (req, res) => {
 
   if (myData.length === 0) {
     //Sending "No previous Booking found" message if no last booking found
-    res.status(200).json({ data: [], message: "No previous Booking found!" });
+    res.status(200).json({ data: null, message: "No previous Booking found!" });
   } else {
     //Sending data if last booking found
-    res.status(200).json({ data: myData });
+    res.status(200).json({ data: myData[0] });
   }
 });
 
