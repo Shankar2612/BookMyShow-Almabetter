@@ -39,7 +39,7 @@ const LastBookingDetails = (props) => {
           </p>
         </>
       ) : (
-        <p>No Previous Booking Found!</p>
+        <p className="no_previous_booking_msg">No Previous Booking Found!</p>
       )}
     </div>
   );
