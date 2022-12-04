@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BsContext from "./BsContext";
 
 const BsState = (props) => {
@@ -57,6 +57,9 @@ const BsState = (props) => {
         D2: 0,
       });
       setLastBookingDetails(data.data);
+
+      //clearing the local storage when booking is successfull
+      window.localStorage.clear();
     }
   };
 
@@ -71,6 +74,19 @@ const BsState = (props) => {
     // Setting last booking details recieved from the backend.
     setLastBookingDetails(data.data);
   };
+
+  useEffect(() => {
+    //getting movies, slot and seats from localstorage and updating state (useful when page refreshes)
+    const movie = window.localStorage.getItem("movie");
+    const slot = window.localStorage.getItem("slot");
+    const seats = JSON.parse(window.localStorage.getItem("seats"));
+
+    if (movie || slot || seats) {
+      changeTime(slot);
+      changeMovie(movie);
+      changeNoOfSeats(seats);
+    }
+  }, []);
 
   return (
     // providing all the required data to app
