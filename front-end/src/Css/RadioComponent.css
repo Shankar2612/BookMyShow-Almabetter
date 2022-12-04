@@ -1,4 +1,4 @@
-.active {
+.form-check-label.active {
   background-color: rgba(0, 149, 255, 0.937);
   font-weight: 600;
   user-select: none;
@@ -6,7 +6,7 @@
   border-radius: 1px;
   cursor: pointer;
 }
-.inactive {
+.form-check-label.inactive {
   user-select: none;
   cursor: pointer;
   letter-spacing: 0.5px;
@@ -25,13 +25,10 @@
   margin: 10px;
 }
 
-
-
 .text {
   font-size: 17px;
   text-align: center;
 }
-
 
 @media screen and (max-width: 600px) {
   .form-check-label {
