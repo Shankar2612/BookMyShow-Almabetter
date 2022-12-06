@@ -11,21 +11,5 @@
   flex-wrap: wrap;
 }
 
-/* @media screen and (max-width: 900px) {
-  .TS_main_container {
-    flex-wrap: wrap;
-    width: fit-content;
-  }
-}
-@media screen and (max-width: 600px) {
-  .TS_heading {
-    position: relative;
-    left: 0px;
-    align-self: center;
-  }
-  .TS_main_container {
-    position: relative;
-    left: 0px;
-    align-self: center;
-  }
-} */
+
+

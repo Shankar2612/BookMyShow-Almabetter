@@ -31,7 +31,6 @@ const SeatsInput = ({
   return (
     <div
       name={text}
-      // todo -> adding active class based on seat value. {noOfSeat.text}
       className={`form-check-label seats ${
         seat === text ? "active" : "inactive"
       }`}
@@ -49,7 +48,6 @@ const SeatsInput = ({
         id={`${index}input`}
         max="30"
         onChange={change_seats}
-        value={noOfSeat[text]}
       />
     </div>
   );

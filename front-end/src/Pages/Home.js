@@ -64,19 +64,23 @@ const Home = (props) => {
       <Modal />
       <div className="container">
         <div className="selection_container">
-          <SelectMovie />
+          <div className="wrapper">
+            <div className="select_movie_component">
+              <SelectMovie />
+            </div>
+            <div className="last_booking_details_container">
+              <LastBookingDetails />
+            </div>
+          </div>
           <TimeShedule />
           <SelectSeats />
           <button
             onClick={() => {
               handleBookNow();
             }}
-            className="BN-btn">
+            className="BN-btn ">
             Book Now
           </button>
-        </div>
-        <div className="last_booking_details_container">
-          <LastBookingDetails />
         </div>
       </div>
     </>

@@ -11,16 +11,4 @@
   flex-wrap: wrap;
 }
 
-/* @media screen and (max-width: 700px) {
-  .SS_heading {
-    position: relative;
-    left: 0px;
-    align-self: center;
-  }
-  .SS_main_container {
-    position: relative;
-    left: 0px;
-    align-self: center;
-    justify-content: center;
-  }
-} */
+

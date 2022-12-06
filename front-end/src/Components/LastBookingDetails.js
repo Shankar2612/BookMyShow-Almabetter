@@ -12,10 +12,11 @@ const LastBookingDetails = (props) => {
   useEffect(() => {
     //calling get last booking api to get the last booking details
     handleGetLastBooking();
+    // eslint-disable-next-line
   }, []);
 
   return (
-    <div className="last_booking_details_container">
+    <div className="last_booking_details_container_main">
       <h2 className="last_booking_details_header">Last Booking Details:</h2>
       {lastBookingDetails ? (
         <>
@@ -31,7 +32,7 @@ const LastBookingDetails = (props) => {
               })}
             </ul>
           </div>
-          <p className="slot">
+          <p className="slot" style={{textAlign: "left"}}>
             Slot: <span>{lastBookingDetails.slot}</span>
           </p>
           <p className="movie">
