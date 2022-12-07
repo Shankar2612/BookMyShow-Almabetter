@@ -48,6 +48,7 @@ const SeatsInput = ({
         id={`${index}input`}
         max="30"
         onChange={change_seats}
+        value={noOfSeat[text]}
       />
     </div>
   );

@@ -16,12 +16,12 @@ const BsState = (props) => {
 
   // No of seats which the user selects.
   const [noOfSeat, changeNoOfSeats] = useState({
-    A1: 0,
-    A2: 0,
-    A3: 0,
-    A4: 0,
-    D1: 0,
-    D2: 0,
+    A1: "",
+    A2: "",
+    A3: "",
+    A4: "",
+    D1: "",
+    D2: "",
   });
 
   // Last movie booking details.
@@ -30,7 +30,7 @@ const BsState = (props) => {
   // handling post request to save booking details on the backend
   const handlePostBooking = async () => {
     // Sending api request to backend with user selected movie, slot and seats to book movie.
-    const response = await fetch(`http://localhost:8080/api/booking`, {
+    const response = await fetch(`/api/booking`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -49,12 +49,12 @@ const BsState = (props) => {
       changeTime("");
       changeMovie("");
       changeNoOfSeats({
-        A1: 0,
-        A2: 0,
-        A3: 0,
-        A4: 0,
-        D1: 0,
-        D2: 0,
+        A1: "",
+        A2: "",
+        A3: "",
+        A4: "",
+        D1: "",
+        D2: "",
       });
       setLastBookingDetails(data.data);
 
@@ -65,7 +65,7 @@ const BsState = (props) => {
 
   //handle get request to get the last booking details from backend
   const handleGetLastBooking = async () => {
-    const response = await fetch(`http://localhost:8080/api/booking`, {
+    const response = await fetch(`/api/booking`, {
       method: "GET",
     });
 
