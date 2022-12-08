@@ -26,13 +26,13 @@ const LastBookingDetails = (props) => {
               {seats.map((seat, index) => {
                 return (
                   <li className="seat_value" key={index}>
-                    {seat}: {lastBookingDetails.seats[seat]}
+                    {seat}: {Number(lastBookingDetails.seats[seat])}
                   </li>
                 );
               })}
             </ul>
           </div>
-          <p className="slot" style={{textAlign: "left"}}>
+          <p className="slot" style={{ textAlign: "left" }}>
             Slot: <span>{lastBookingDetails.slot}</span>
           </p>
           <p className="movie">
