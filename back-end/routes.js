@@ -11,7 +11,7 @@ app.use(express.json());
 // Creating new booking and adding it to database.
 router.post("/booking", async (req, res) => {
   const { movie, slot, seats } = req.body;
-
+  
   const myData = new Schema({ movie, slot, seats });
   const saved = await myData.save();
 
