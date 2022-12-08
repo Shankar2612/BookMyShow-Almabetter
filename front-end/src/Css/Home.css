@@ -2,7 +2,7 @@
   width: 80%;
   /* margin-top: 10vh; */
   margin: 30px auto;
-  padding: 30px 30px 30px 50px;
+  padding: 30px 30px 0px 30px;
   background-color: #021745;
   border-radius: 5px;
   color: #fff;
@@ -20,25 +20,45 @@
 .BN-btn{
   padding: 10px;
   border: none;
+  margin-top: 20px;
+  left: 10px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 25px;
-  color: #fff;
+  color: aqua;
   font-weight: bold;
-  background-image: linear-gradient(to right, rgb(0, 119, 255) , rgb(106, 147, 223));
+  background-color: rgb(11, 33, 85);
+  border: 2px solid rgb(4, 234, 255) ;
   position: relative;
-  left: 15px;
 }
+
+.BN-btn:hover{
+  background-color: rgba(0, 255, 255, 0.188);
+  color: #fff;
+}
+
 .wrapper{
   display: flex;
   flex-grow: 0;
   overflow:visible;
+}
+.time_seats_container{
+  position: relative;
+  overflow: auto;
+  top: -40px;
+}
+.SS_wrapper{
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 1300px) {
  .wrapper{
   flex-direction: column-reverse;
  } 
+ 
+.time_seats_container{
+  top: 0px;
+}
  .last_booking_details_container{
   margin-bottom: 20px;
  }

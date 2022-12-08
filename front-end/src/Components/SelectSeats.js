@@ -11,21 +11,23 @@ const SelectSeats = () => {
 
   return (
     <>
-      <h1 className="SS_heading">Select Seats :-</h1>
-      <div className="SS_main_container">
-        {seats.map((el, index) => {
-          return (
-            <SeatsInput
-              seat={seat}
-              key={index}
-              index={index}
-              changeSeats={changeSeats}
-              noOfSeat={noOfSeat}
-              text={el}
-              changeNoOfSeats={changeNoOfSeats}
-            />
-          );
-        })}
+      <div className="SS_wrapper">
+        <h1 className="SS_heading">Select Seats :-</h1>
+        <div className="SS_main_container">
+          {seats.map((el, index) => {
+            return (
+              <SeatsInput
+                seat={seat}
+                key={index}
+                index={index}
+                changeSeats={changeSeats}
+                noOfSeat={noOfSeat}
+                text={el}
+                changeNoOfSeats={changeNoOfSeats}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );

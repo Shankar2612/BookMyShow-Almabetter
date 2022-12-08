@@ -72,15 +72,17 @@ const Home = (props) => {
               <LastBookingDetails />
             </div>
           </div>
-          <TimeShedule />
-          <SelectSeats />
-          <button
-            onClick={() => {
-              handleBookNow();
-            }}
-            className="BN-btn ">
-            Book Now
-          </button>
+          <div className="time_seats_container">
+            <TimeShedule />
+            <SelectSeats />
+            <button
+              onClick={() => {
+                handleBookNow();
+              }}
+              className="BN-btn ">
+              Book Now
+            </button>
+          </div>
         </div>
       </div>
     </>

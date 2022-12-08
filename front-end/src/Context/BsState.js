@@ -30,7 +30,7 @@ const BsState = (props) => {
   // handling post request to save booking details on the backend
   const handlePostBooking = async () => {
     // Sending api request to backend with user selected movie, slot and seats to book movie.
-    const response = await fetch(`/api/booking`, {
+    const response = await fetch(`http://localhost:8080/api/booking`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -65,7 +65,7 @@ const BsState = (props) => {
 
   //handle get request to get the last booking details from backend
   const handleGetLastBooking = async () => {
-    const response = await fetch(`/api/booking`, {
+    const response = await fetch(`http://localhost:8080/api/booking`, {
       method: "GET",
     });
 
